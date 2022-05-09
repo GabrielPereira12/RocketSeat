@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas escolares</title>
+</head>
+<body>
+    <input type="number" id="nota" min="1" max="100">
+    <button onclick="Resultado()">Enviar</button>
+    
+    <p id="resposta_nota"></p>
+
+    <script>
+        let resNota = document.querySelector("#resposta_nota")
+        
+        function Resultado(){
+            let nota = document.querySelector("#nota").value
+
+            if(nota >= 90 && nota < 101){
+                resNota.innerHTML = "A"
+            }else if(nota < 90 && nota >= 80){
+                resNota.innerHTML = "B"
+            }else if(nota < 80 && nota >= 70){
+                resNota.innerHTML = "C"
+            }else if(nota < 70 && nota >= 60){
+                resNota.innerHTML = "D"
+            }else if(nota < 60 && nota >= 0){
+                resNota.innerHTML = "F"
+            }else{
+                resNota.innerHTML = "Nota inválida"
+            }
+        }
+
+    </script>
+</body>
+</html>

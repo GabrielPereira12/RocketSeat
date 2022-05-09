@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<body>
+
+    <input type="password" required>
+    <!-- Required torna o input obrigatório para o formulário -->
+
+    <form id="meu-form"></form>
+    <br> <input name="email" type="email" form="meu-form" disabled> <br>
+    <!-- Nome é necessário para um form -->
+
+    <br> <form action="" method="post" enctype="multipart/form-data">
+        <input type="file">
+    </form>
+    <!-- Configuração do form necessária para o input file funcionar corretamente-->
+</body>
+</html>

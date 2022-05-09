@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas</title>
+</head>
+<body>
+    <h1>Conta</h1>
+
+    <script>
+        let saldo = {
+            receita: [100, 700, 400, 95],
+            despesas: [90, 30, 600, 200, 112]
+        }
+
+        function Calculo(){
+            var receitaTotal = 0
+            let i = 0
+            while(i <= saldo.receita.length - 1){
+                receitaTotal += (saldo.receita[i])
+
+                console.log(receitaTotal);
+                i++;
+            }
+            
+        }
+    </script>
+</body>
+</html>

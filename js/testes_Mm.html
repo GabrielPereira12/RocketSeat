@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testes</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button id="botao_maiusculas">MAIUSCULAS</button>
+    <button id="botao_minusculas">MINUSCULAS</button>
+
+    <script>
+        var texto_do_usuario = document.getElementById("text")
+
+        const botaoMa = document.getElementById("botao_maiusculas").onclick = function aumentar(){
+            texto_do_usuario.value = texto_do_usuario.value.toUpperCase()
+        }
+
+        const botaoMi = document.getElementById("botao_minusculas").onclick = function Diminuir(){
+            texto_do_usuario.value = texto_do_usuario.value.toLowerCase()
+        }
+        
+    </script>
+</body>
+</html>
