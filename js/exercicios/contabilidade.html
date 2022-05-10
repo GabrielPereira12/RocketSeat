@@ -7,25 +7,97 @@
     <title>Contas</title>
 </head>
 <body>
-    <h1>Conta</h1>
+    <table>
+        <caption>Contas</caption>
+        <thead>
+            <th></th>
+            <th>Despesas</th>
+            <th>Receita</th>
+            <th>Total</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td id="des0"></td>
+                <td id="rec0"></td>
+                <td id="tot0"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="des1"></td>
+                <td id="rec1"></td>
+                <td id="tot1"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="des2"></td>
+                <td id="rec2"></td>
+                <td id="tot2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="des3"></td>
+                <td id="rec3"></td>
+                <td id="tot3"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="des4"></td>
+                <td id="rec4"></td>
+                <td id="tot4"></td>
+            </tr>
+            <tr>
+                <th>Valor Final</th>
+                <td></td>
+                <td></td>
+                <td id="tudo"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p id="answer"></p>
 
     <script>
         let saldo = {
-            receita: [100, 700, 400, 95],
-            despesas: [90, 30, 600, 200, 112]
+            receita: [100, 700, 400, 95, 150],
+            despesas: [90, 30, 600, 2000, 312]
         }
 
         function Calculo(){
+            var despesasTotal = 0
             var receitaTotal = 0
+            var totalTudo = 0
+            var total
             let i = 0
             while(i <= saldo.receita.length - 1){
-                receitaTotal += (saldo.receita[i])
+                receitaTotal += saldo.receita[i]
+                let receitaTable = document.getElementById("rec"+i)
+                receitaTable.innerHTML = saldo.receita[i]
 
-                console.log(receitaTotal);
+                despesasTotal += saldo.despesas[i]
+                let despesasTable = document.getElementById("des"+i)
+                despesasTable.innerHTML = saldo.despesas[i]
+
+                total = saldo.receita[i] - saldo.despesas[i]
+                let totalTable = document.getElementById("tot"+i)
+                totalTable.innerHTML = total
+     
                 i++;
             }
             
+            totalTudo = receitaTotal - despesasTotal
+            let tudoTable = document.getElementById("tudo")
+            tudoTable.innerHTML = totalTudo
+
+            let answer = document.getElementById("answer")
+            if(totalTudo > 0){
+                answer.innerHTML = "Seu saldo é positivo"
+            }else{
+                answer.innerHTML = "Seu saldo é negativo"
+            }
         }
+
+        Calculo()
     </script>
 </body>
 </html>

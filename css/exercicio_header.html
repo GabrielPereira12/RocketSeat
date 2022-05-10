@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header menu navigation</title>
+    <style>
+        header{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 60px;
+        }
+
+        a{
+            margin: 0 0.4rem;
+            color: initial;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        header button:last-child{
+            margin-top: 1rem;
+            font: 1.2rem bold;
+            width: 100px;
+            height: 30px;
+            color: white;
+            background-color: #2323c2;
+            border-radius: 5px;
+            border: 0;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        button:active{
+            background-color: #6e6eda;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>logo</h1>
+
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">SERVICES</a>
+            <a href="#">TESTIMONIALS</a>
+
+            <a href="#"><button>CONTACT</button></a>
+        </nav>
+    </header>
+</body>
+</html>

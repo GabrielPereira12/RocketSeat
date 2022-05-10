@@ -8,20 +8,15 @@
 </head>
 <body>
     <input type="text" id="text">
-    <button id="botao_maiusculas">MAIUSCULAS</button>
-    <button id="botao_minusculas">MINUSCULAS</button>
 
     <script>
-        var texto_do_usuario = document.getElementById("text")
+        const text = document.getElementById('text')
 
-        const botaoMa = document.getElementById("botao_maiusculas").onclick = function aumentar(){
-            texto_do_usuario.value = texto_do_usuario.value.toUpperCase()
-        }
-
-        const botaoMi = document.getElementById("botao_minusculas").onclick = function Diminuir(){
-            texto_do_usuario.value = texto_do_usuario.value.toLowerCase()
-        }
-        
+        text.addEventListener('keypress', (event)=> {
+            if(event.key == "w"){
+                alert("DEU CERTO!!!!")
+            }
+        })
     </script>
 </body>
 </html>

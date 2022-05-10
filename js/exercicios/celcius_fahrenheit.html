@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de temperatura</title>
+</head>
+<body>
+    <script>
+        //transformDegree('50F')
+        function transformDegree(degree) {
+           const celsiusExists = degree.toUpperCase().includes('C')
+           const fahrenheitExists = degree.toUpperCase().includes('F')
+
+           if(!celsiusExists && !fahrenheitExists) {
+               throw new Error("Grau não identificado")
+           }
+
+           let updateDegree = Number(degree.toUpperCase().replace("F", ""));
+           let formula = (fahrenheit) => (fahrenheit - 32) * 5/9
+           let degreeSign = 'C'
+
+           if(celsiusExists) {
+               updateDegree = Number(degree.toUpperCase().replace());
+               formula = celcius => celcius * 9/5 + 32
+               degreeSign = 'F'
+           }
+
+
+           return formula(updateDegree) + degreeSign
+       }
+
+       try {
+            console.log(transformDegree('10C'))
+            console.log(transformDegree('50F'))
+            transformDegree('50Z')
+       } catch (error) {
+           console.log(error.message)
+       }
+    </script>
+</body>
+</html>
