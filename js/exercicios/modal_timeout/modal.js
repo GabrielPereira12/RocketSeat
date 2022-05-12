@@ -5,12 +5,13 @@ const divModal = document.querySelector('.modal-wrapper')
 button_openModal.addEventListener('click', ()=> {
     divModal.classList.remove('invisible')
     setTimeout(()=>{
-        
-    })
+        window.location.reload(true)
+    }, 5000)
     body.addEventListener('keydown', (event)=> {
         if(event.key === "Escape") {
             divModal.classList.add('invisible')
             body.removeEventListener('keydown', true)
+            clearTimeout()
         }
     })
 })
