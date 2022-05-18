@@ -1,0 +1,18 @@
+{
+    "Nome": "Gabriel Pereira",
+    "Idade": 18,
+    "Filmes_favoritos": [
+        "Spider-man in the spiderverse",
+        "50 first dates"
+    ],
+    "Hobbies": {
+        "Dias_uteis": [
+            "Programar",
+            "Exercitar"
+        ],
+        "Fim_de_Semana": [
+            "Correr",
+            "Jogar"
+        ]
+    }
+}
