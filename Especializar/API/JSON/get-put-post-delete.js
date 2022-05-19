@@ -4,6 +4,7 @@ const app = express()
 
 app.listen('3000')
 
+
 /* Rota DELETE
 app.route('/:identificador').delete((req, res) => {
     res.send(req.params.identificador)

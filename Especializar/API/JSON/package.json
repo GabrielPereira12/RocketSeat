@@ -2,10 +2,10 @@
   "name": "json",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "get-put-post-delete.js",
   "scripts": {},
   "keywords": [],
-  "author": "",
+  "author": "Gabriel",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1"
